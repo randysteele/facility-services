@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ .container {
+    display: block;
+    width: 100%;
+  }
+  
+  .card {
+    border: 1px solid black;
+    float: left;
+    margin: 1px;
+    padding: 10px 3px;
+    /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/
+    width: calc( 100% / 5 - 10px);
+  }
+  
+  
+  /*first element*/
+  
+  .container .card:first-child {
+    margin-left: 0;
+  }
+  
+  
+  /*last element of the first row*/
+  
+  .container .card:nth-child(5n) {
+    margin-right: 0;
+  }
+  
+  
+  /*first-element of the 2nd row*/
+  
+  .container .card:nth-child(5n+1) {
+    margin-left: 0;
+  }
+  
+  
+  /*last element*/
+  
+  .container .card:last-child {
+    margin-right: 0;
+  }
