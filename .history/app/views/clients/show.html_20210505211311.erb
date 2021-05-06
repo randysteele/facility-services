@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <strong>Name:</strong>
+    <%= @client.name %>
+</p>
+
+<p>
+    <strong>Address:</strong>
+    <%= @client.address %>
+</p>
+
+<p>
+    <strong>City:</strong>
+    <%= @client.city %>
+</p>
+
+<p>
+    <strong>State:</strong>
+    <%= @client.state %>
+</p>
+
+<p>
+    <strong>Zip:</strong>
+    <%= @client.zip %>
+</p>
+
+<h2>Workorders</h2>
+<% for workorder in @client.workorders %>
+<ul>
+    <li><%= workorder.name%></li>
+    <li><%=workorder.address%></li>
+    <li><%=workorder.city%></li>
+    <li><%=workorder.state%></li>
+    <li><%=workorder.zip%></li>
+</ul>
+<% end %>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Add Workorder', client_workorders_path(@client) %>
+<%= link_to 'Back', clients_path %>

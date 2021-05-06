@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  caller: MyString
+  technician: MyString
+  target_date: 2021-05-05 20:15:50
+  resolution: MyString
+  client: one
+
+two:
+  body: MyText
+  caller: MyString
+  technician: MyString
+  target_date: 2021-05-05 20:15:50
+  resolution: MyString
+  client: two
